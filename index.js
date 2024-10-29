@@ -1,5 +1,8 @@
 //import {x} from './app'
 const app = require('./app');
+const color = require('colors');
+
+console.log("hello".bgBlue);
 console.log(app.x);
 console.log(app.y);
 
