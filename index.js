@@ -1,10 +1,10 @@
 //import {x} from './app'
-const app = require('./app');
-const color = require('colors');
+// const app = require('./app');
+// const color = require('colors');
 
-console.log("hello".bgBlue);
-console.log(app.x);
-console.log(app.y);
+// console.log("hello".bgBlue);
+// console.log(app.x);
+// console.log(app.y);
 
 
 
@@ -26,13 +26,21 @@ console.log(app.y);
 //     console.log(i);
 // }
 
- const arr=[2,4,7,1,3,8,3];
+//  const arr=[2,4,7,1,3,8,3];
 // console.log(arr)
 // console.log(arr[0])
 
-let result = arr.filter((item) => {
-    //console.log(item)
-    return item >= 4
-})
+// let result = arr.filter((item) => {
+//     //console.log(item)
+//     return item >= 4
+// })
 
-console.log(result)
+// console.log(result)
+
+const http = require('http')
+const data = require('./data')
+http,http.createServer((req, res) => {
+    res.writeHead(200, {'Content-Type':'application\json'});
+    res.write(JSON.stringify(data));
+    res.end();
+}).listen(5000);
